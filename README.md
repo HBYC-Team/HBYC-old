@@ -10,13 +10,13 @@
 ```bash
 $ python app.py
 ```
-**Windows使用者可以直接運行`run.bat`使機器人上線，若要裝相依性套件可以直接使用`install.bat`**
+Windows使用者可以直接運行`/bat/run.bat`使機器人上線，若要裝相依性套件可以直接使用`/bat/install.bat`
 </br>
 
-**Linux, Mac使用者可以直接運行`run.sh`使機器人上線，若要裝相依性套件可以直接使用`install.sh`**
+Linux, Mac使用者可以直接運行`/sh/run.sh`使機器人上線，若要自動安裝相依性套件可以直接使用`/sh/install.sh`
 </br>
 
-**切記將config.json裡面的token填上你自己的token**
+切記將config.json裡面的token欄位填上你自己的token。
 
 ## 授權方式
 請見LICENSE檔案。
