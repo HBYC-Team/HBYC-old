@@ -1,0 +1,28 @@
+{
+    "name": "hbyc",
+    "version": "0.0.1",
+    "description": "A simple & Easy Discord Bot",
+    "main": "app.py",
+
+    "dependencies": {
+        "Python": "^3.8",
+        "pip": "^20.0.2",
+        "discord.py": "^1.7.3",
+        "asyncio": "^3.4.3",
+        "youtube-dl": "^2021.12.17",
+        "pytz": "^2019.3"
+    },
+
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hugocoding/HBYC.git"
+    },
+
+
+    "author": {
+        "email": "mivck1012@gmail.com",
+        "name": "Hugo Chen/恐龍#2549"
+    },
+
+    "license": "BSD 3-Clause"
+}
