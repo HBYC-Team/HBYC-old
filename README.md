@@ -1,4 +1,9 @@
 # HBYC
+![license](https://img.shields.io/github/license/hugocoding/HBYC)
+![last_commit](https://img.shields.io/github/last-commit/hugocoding/HBYC)
+![Discord](https://img.shields.io/discord/977204156043509780)
+[![EMU900!!!](./public/images/banner.jpeg)](https://discord.com/api/oauth2/authorize?client_id=977024737156931675&permissions=8&scope=bot%20applications.commands)
+
 一個非常簡易的discord機器人，使用pycord模組編寫。
 
 ## 如何做一台跟這台一樣的機器人
@@ -31,7 +36,19 @@ if __name__ == "__main__":
 if __name__ == "__main__":
     client.run(conf["token"])
 ```
-或者你會env的話也可以自己弄。
+或者你會env的話也可以自己建檔設定token。
+
+## 專案特色
+其實沒什麼特色，就是最簡單的code而已。
+
+## 專案包含
+* 純pycord達成簡易的許多功能
+* 達成以pycord部署簡易斜線指令
+* 簡易的音樂功能
+* 簡易的遊戲功能
+* Cog實例
+* 以core的方式使用__init__
+* 簡易聊天功能
 
 ## 授權方式
 請見LICENSE檔案。
@@ -40,4 +57,7 @@ if __name__ == "__main__":
 請見requirements.txt。
 
 ## 作者
-恐龍#2549/hugocoding
+恐龍#2549/hugocoding。
+</br>
+
+有關於其他問題可以使用Discord聯絡或是加入作者正在建立中的[程式伺服器](https://discord.gg/J7X2nWXszp)
