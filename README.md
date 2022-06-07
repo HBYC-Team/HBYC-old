@@ -2,7 +2,7 @@
 ![license](https://img.shields.io/github/license/hugocoding/HBYC)
 ![last_commit](https://img.shields.io/github/last-commit/hugocoding/HBYC)
 ![Discord](https://img.shields.io/discord/977204156043509780)
-[![EMU900!!!](./public/images/banner.jpeg)](https://discord.com/api/oauth2/authorize?client_id=977024737156931675&permissions=8&scope=bot%20applications.commands)
+[![EMU900!!!](./public/images/banner.jpeg)](https://reurl.cc/GxQqdy)
 
 一個非常簡易的discord機器人，使用pycord模組編寫。
 
@@ -60,4 +60,4 @@ if __name__ == "__main__":
 恐龍#2549/hugocoding。
 </br>
 
-有關於其他問題可以使用Discord聯絡或是加入作者正在建立中的[程式伺服器](https://discord.gg/J7X2nWXszp)
+有關於其他問題可以使用Discord聯絡或是加入作者正在建立中的[程式伺服器](https://discord.gg/J7X2nWXszp)。
