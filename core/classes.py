@@ -1,7 +1,5 @@
-from http import client
 import discord
-from discord.ext import commands
 
-class Cog_Extension(commands.Cog):
+class Cog_Extension(discord.Cog):
     def __init__(self, client):
         self.client = client
