@@ -1,2 +1,1 @@
-python ../app.py
-pause
+py3 ../app.py

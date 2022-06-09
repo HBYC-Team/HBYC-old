@@ -1,3 +1,1 @@
-python -m pip install -r ../requirements.txt
-
-pause
+py3 -m pip install -r ../requirements.txt
