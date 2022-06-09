@@ -43,21 +43,25 @@ if __name__ == "__main__":
 
 ## 專案包含
 * 純pycord達成簡易的許多功能
-* 達成以pycord部署簡易斜線指令
-* 簡易的音樂功能
-* 簡易的遊戲功能（預計將在v0.0.2開始開發）
+* 達成以pycord部署斜線指令
+* 簡易的音樂指令
+* 簡易的遊戲指令（預計將在v0.0.2開始開發）
 * Cog實例
 * 以core的方式定義__init__
-* 簡易聊天功能
+* 簡易聊天指令
+
+## 指令列表
+請見[指令列表](./docs/cmds_list.md)檔案。
 
 ## 授權方式
-請見LICENSE檔案。
+請見[LICENSE](./LICENSE)檔案。
 
 ## 相依性套件
-請見requirements.txt。
+請見[requirements.txt](./requirements.txt)檔案。
 
+## 更新日誌
+請見[更新日誌](./docs/dev_log.md)檔案(EN-Only)。
 ## 作者
 恐龍#2549/hugocoding。
-</br>
 
 有關於其他問題可以使用Discord聯絡或是加入作者正在建立中的[程式伺服器](https://discord.gg/J7X2nWXszp)。
