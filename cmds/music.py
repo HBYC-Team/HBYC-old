@@ -1,7 +1,7 @@
 from discord.commands import slash_command, Option
 from core.classes import Cog_Extension
 from discord.utils import get
-from discord import FFmpegPCMAudio
+from discord import ApplicationCommand, FFmpegPCMAudio
 from youtube_dl import YoutubeDL
 
 import json
@@ -52,7 +52,8 @@ class Music(Cog_Extension):
             URL = info['url']
             voice.play(FFmpegPCMAudio(URL, **FFMPEG_OPTIONS))
             voice.is_playing()
-            await ctx.respond("✅")
+            now_playing = f"現正播放：{url}"
+            await ctx.respond(now_playing)
 
         else:
             await ctx.respond("我已經在播音樂了！")
@@ -84,21 +85,6 @@ class Music(Cog_Extension):
         if voice.is_playing():
             voice.stop()
             await ctx.respond("✅")
-
-    @slash_command(name="volume", description="音量調整") #調整中
-    async def volume(self, ctx, *, 音量: Option(int, "輸入音量(1~100之間)")):
-        if not ctx.voice_state.is_playing:
-            return await ctx.respond('Nothing being played at the moment.')
-
-        if 0 > 音量 > 100:
-            return await ctx.respond('Volume must be between 0 and 100')
-
-        ctx.voice_state.volume = 音量 / 100
-        await ctx.respond('Volume of the player set to {}%'.format(音量))
-
-    @slash_command(name="now", description="現正播放的音樂")
-    async def now(self, ctx):
-        await ctx.send(embed=ctx.voice_state.current.create_embed())
 
 def setup(bot):
     bot.add_cog(Music(bot))
