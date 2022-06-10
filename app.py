@@ -1,8 +1,8 @@
 """
 ***************HBYC Bot*************
 **********Author:hugocoding*********
-********Release Date:2022.6.8*******
-************Version:0.0.1***********
+********Release Date:2022.6.13*******
+************Version:0.0.2***********
 ********License: BSD-3 Claude*******
 ****Develop OS: Ubuntu 20.04 LTS****
 ************************************
@@ -26,6 +26,10 @@ async def on_ready():
     print("Bot Logined")
     print(client.user)
     print("------------------------")
+    for guild in client.guilds:
+        print(guild.id, guild.name)
+    print("------------------------")
+    
 
 @client.slash_command(name = "load", description = "Load the Cog_Extension")
 async def load(
