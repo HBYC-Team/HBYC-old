@@ -86,5 +86,6 @@ class Music(Cog_Extension):
             voice.stop()
             await ctx.respond("✅")
 
+
 def setup(bot):
     bot.add_cog(Music(bot))
