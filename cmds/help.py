@@ -11,7 +11,7 @@ class Help(Cog_Extension):
     async def help(
         self, 
         ctx,
-        group: Option(str, "輸入指令類別", choices=["all", "chat", "music"])
+        group: Option(str, "輸入指令類別", choices=["all", "chat", "music", "user"])
     ):
         if group == "all" : 
             embed=discord.Embed(title="HBYC的協助中心", description="使用/help [group] 取得該類別指令的詳細使用方法", color=0x0080FF)
@@ -38,6 +38,12 @@ class Help(Cog_Extension):
             embed.add_field(name="pause", value="暫停正在播放的音樂", inline=False)
             embed.add_field(name="resume", value="繼續播放原本在播放的音樂", inline=False)
             embed.add_field(name="stop", value="結束目前正在播放的音樂", inline=False)
+            embed.set_footer(text=f"{ctx.author}‧{timestamp}")
+            await ctx.respond(embed=embed)
+
+        if group == "user" :
+            embed = discord.Embed(title="使用者指令類別", description="使用者指令區", color="FF0000")
+            embed.add_field(name="avatar", value="讓機器人取得特定使用者的頭像", inline=False)
             embed.set_footer(text=f"{ctx.author}‧{timestamp}")
             await ctx.respond(embed=embed)
 
