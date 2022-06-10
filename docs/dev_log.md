@@ -26,3 +26,18 @@ Add the commands
 * music.py  - Add join/play/pause/resume/stop/leave commands(volume/now command is still in fix)
 * game - This file will be .py file which will add more commands in future versions
 
+# v0.0.2
+Release date:2022.06.13.
+
+## app.py
+* Add the main program.
+* Load/Unload/Reload commands.
+
+## ./cmds
+Add and remove some commands.
+
+* chat.py - Fixed say command + Add more emojis to thinking command.
+* event.py - Nothing changed.
+* help.py - Add help commands of game group.
+* music.py  - Remove volume/now command.
+* game.py - Add guessnum game.
