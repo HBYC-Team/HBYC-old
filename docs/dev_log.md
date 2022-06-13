@@ -11,14 +11,14 @@ Release date:2022.06.08
 * Load/Unload/Reload commands.
 
 ## ./core
-* Add \__init__
+* Add `__init__`
 
 ## Fast-Install Packages
 * Add Batch file to ./bat
 * Add Shell Script to ./sh
 
 ## ./cmds
-Add the commands
+Add the commands.
 
 * chat.py - Add say/repeat/thinking commands
 * event.py - Add some event of the bot
@@ -30,14 +30,18 @@ Add the commands
 Release date:2022.06.13.
 
 ## app.py
-* Add the main program.
-* Load/Unload/Reload commands.
+* Load/Unload/Reload commands if you don't have password then you can't use these commands.
 
 ## ./cmds
 Add and remove some commands.
 
 * chat.py - Fixed say command + Add more emojis to thinking command.
-* event.py - Nothing changed.
-* help.py - Add help commands of game group.
-* music.py  - Remove volume/now command.
-* game.py - Add guessnum game.
+* event.py - Add react when the bot got mentioned.
+* help.py - typo.
+* music.py  - Remove volume/now command + Fixed join command.
+* user.py - Add avatar command.
+
+## game
+The `guessnum` command will out soon.
+
+## end
