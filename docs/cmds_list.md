@@ -19,3 +19,13 @@ resume
 stop
 leave
 ```
+
+## game group
+```
+guessnum
+```
+
+## user group
+```
+avatar
+```
