@@ -1,3 +1,5 @@
 {
-    "token": "put your token here and change some code, see at README.md"
+    "token": "put your token here and change some code, see at README.md",
+	"presence": "ww",
+	"got_mention": ["???", "幹嘛", "吵死了", "ping我幹嘛", "我是個大忙人，到底有什麼事", "沒事吵什麼鬼", "ping我沒辦法使用任何指令喔，請用`/help`", "到底?", "蝦毀?", "我現在很忙，稍等x^x^n秒後再來找我:)", "<:pingsock:985421847606726656>"]
 }
