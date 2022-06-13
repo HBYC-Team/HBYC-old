@@ -1,4 +1,4 @@
-pip>=20.0.2
+pip>=22.0.2
 discord.py>=1.7.3
 asyncio>=3.4.3
 youtube-dl>=2021.12.17
