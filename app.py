@@ -79,7 +79,6 @@ for filename in os.listdir("./cmds"):
         client.load_extension(f"cmds.{filename[:-3]}")
 
 
-
 load_dotenv()
 token = os.getenv("DISCORD_TOKEN")
 passwd = os.getenv("password")
