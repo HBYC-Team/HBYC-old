@@ -1,12 +1,12 @@
 {
     "name": "hbyc",
-    "version": "0.0.1",
-    "description": "A Simple&Easy Discord Bot Written Via Pycord.",
+    "version": "0.0.2",
+    "description": "A Simple & Easy Discord Bot Written Via Pycord.",
     "main": "app.py",
 
     "dependencies": {
         "Python": "^3.8",
-        "pip": "^20.0.2",
+        "pip": "^22.1.2",
         "discord.py": "^1.7.3",
         "asyncio": "^3.4.3",
         "youtube-dl": "^2021.12.17",
