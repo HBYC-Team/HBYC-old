@@ -21,7 +21,7 @@ Release date:2022.06.08
 Add the commands.
 
 * chat.py - Add say/repeat/thinking commands
-* event.py - Add some event of the bot
+* evenit.py - Add some event of the bot
 * help.py - Add help commands
 * music.py  - Add join/play/pause/resume/stop/leave commands(volume/now command is still in fix)
 * game - This file will be .py file which will add more commands in future versions
@@ -31,6 +31,7 @@ Release date:2022.06.13.
 
 ## app.py
 * Load/Unload/Reload commands if you don't have password then you can't use these commands.
+* Print bot in what the guilds.Use `for guild in client.guilds`
 
 ## ./cmds
 Add and remove some commands.
