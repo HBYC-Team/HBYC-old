@@ -17,7 +17,12 @@ class Chat(Cog_Extension):
     ):
         await ctx.respond("done", delete_after=0)
         await ctx.send(訊息內容)
-        
+        fromserver = ctx.author.guild.name
+        print("/say", 訊息內容)
+        print("from", fromserver)
+        print("by:", ctx.author)
+        print("------")
+    
     @slash_command(name="repeat", description="讓機器人重複一句你說的話")
     async def repeat(
         self, 
@@ -25,16 +30,27 @@ class Chat(Cog_Extension):
         *, 
         訊息內容: Option(str, "輸入你要機器人重複的話")):
         await ctx.respond(訊息內容)
-    
+        fromserver = ctx.author.guild.name
+        print("/repeat", 訊息內容)
+        print("from", fromserver)
+        print("by:", ctx.author)
+        print("------"
+                )
     @slash_command(name="thinking", description="thinking")
     async def thinking(self, ctx, 種類: Option(str, "選擇thinking表情類型", choices=["normal", "cat", "attano","thonk","superthonk","raythonk","rainbowhtonk","owothonk","thongk","smile1","smile2","rayteethonk","blue", "10","distrotion", "pistol"])):
+        fromserver = ctx.author.guild.name
+        print("/thinking", 種類)
+        print("from", fromserver)
+        print("by:", ctx.author)
+        print("------")
+        
         if 種類 == "normal":
             await ctx.respond("done", delete_after=0)
             await ctx.send("<:thinking:974621588257398784>")
 
         if 種類 == "cat":
             await ctx.respond("done", delete_after=0)
-            await ctx.send(":cathink:985794732926074900")
+            await ctx.send("<:cathink:985794732926074900>")
 
         if 種類 == "attano":
             await ctx.respond("done", delete_after=0)
