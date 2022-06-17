@@ -45,4 +45,12 @@ Add and remove some commands.
 ## game
 The `guessnum` command will out soon.
 
+## 2022.6.17
+v0.0.2 bug fixes-
+* app.py
+* chat.py
+* event.py
+* help.py
+* music.py
+
 ## end
