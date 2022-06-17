@@ -1,4 +1,5 @@
 import discord
+
 from discord.commands import slash_command, Option
 from core.classes import Cog_Extension
 
@@ -13,6 +14,12 @@ class Help(Cog_Extension):
         ctx,
         group: Option(str, "輸入指令類別", choices=["all", "chat", "music", "user"])
     ):
+        fromserver = ctx.author.guild.name
+        print("/help", group)
+        print("from", fromserver)
+        print("by", ctx.author)
+        print("------")
+
         if group == "all" : 
             embed=discord.Embed(title="HBYC的協助中心", description="使用/help [group] 取得該類別指令的詳細使用方法", color=0x0080FF)
             embed.add_field(name="指令類別", value="HBYC的指令類別", inline=False)
@@ -42,7 +49,7 @@ class Help(Cog_Extension):
             await ctx.respond(embed=embed)
 
         if group == "user" :
-            embed = discord.Embed(title="使用者指令類別", description="使用者指令區", color="FF0000")
+            embed = discord.Embed(title="使用者指令類別", description="使用者指令區", color=0x003cff)
             embed.add_field(name="avatar", value="讓機器人取得特定使用者的頭像", inline=False)
             embed.set_footer(text=f"{ctx.author}‧{timestamp}")
             await ctx.respond(embed=embed)
