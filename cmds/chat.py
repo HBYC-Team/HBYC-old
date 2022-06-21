@@ -2,10 +2,11 @@ import discord
 from random import choices
 from core.classes import Cog_Extension
 from discord.commands import slash_command, Option
-import json
+import json, time
 
 with open("config.json", mode="r", encoding="utf8") as config:
     conf = json.load(config)
+
 
 class Chat(Cog_Extension):
     @slash_command(name="say", description="讓機器人替你說一句話")
@@ -18,8 +19,10 @@ class Chat(Cog_Extension):
         await ctx.respond("done", delete_after=0)
         await ctx.send(訊息內容)
         fromserver = ctx.author.guild.name
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print("/say", 訊息內容)
         print("from", fromserver)
+        print("at", timestamp)
         print("by:", ctx.author)
         print("------")
     
@@ -31,16 +34,20 @@ class Chat(Cog_Extension):
         訊息內容: Option(str, "輸入你要機器人重複的話")):
         await ctx.respond(訊息內容)
         fromserver = ctx.author.guild.name
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print("/repeat", 訊息內容)
         print("from", fromserver)
+        print("at", timestamp)
         print("by:", ctx.author)
         print("------"
                 )
     @slash_command(name="thinking", description="thinking")
-    async def thinking(self, ctx, 種類: Option(str, "選擇thinking表情類型", choices=["normal", "cat", "attano","thonk","superthonk","raythonk","rainbowhtonk","owothonk","thongk","smile1","smile2","rayteethonk","blue", "10","distrotion", "pistol"])):
+    async def thinking(self, ctx, 種類: Option(str, "選擇thinking表情類型", choices=["normal", "cat", "attano","thonk","superthonk","raythonk","rainbowhtonk","owothonk","thongk","smile1","smile2","rayteethonk","blue", "10","distrotion", "pistol", "隨機(開發中)"])):
         fromserver = ctx.author.guild.name
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print("/thinking", 種類)
         print("from", fromserver)
+        print("at", timestamp)
         print("by:", ctx.author)
         print("------")
         
@@ -107,6 +114,7 @@ class Chat(Cog_Extension):
         if 種類 == "pistol":
             await ctx.respond("done", delete_after=0)
             await ctx.send("<:pisthonk:984310418455539742>")
-            
+        
+
 def setup(client):
     client.add_cog(Chat(client))
