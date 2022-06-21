@@ -10,14 +10,14 @@ Release date:2022.06.08
 * Add the main program.
 * Load/Unload/Reload commands.
 
-## ./core
+## /core
 * Add `__init__`
 
 ## Fast-Install Packages
 * Add Batch file to ./bat
 * Add Shell Script to ./sh
 
-## ./cmds
+## /cmds
 Add the commands.
 
 * chat.py - Add say/repeat/thinking commands
@@ -33,7 +33,7 @@ Release date:2022.06.13.
 * Load/Unload/Reload commands if you don't have password then you can't use these commands.
 * Print bot in what the guilds.Use `for guild in client.guilds`
 
-## ./cmds
+## /cmds
 Add and remove some commands.
 
 * chat.py - Fixed say command + Add more emojis to thinking command.
@@ -52,5 +52,19 @@ v0.0.2 bug fixes-
 * event.py
 * help.py
 * music.py
+
+# v0.0.3
+Release date:2022.06.21
+
+## app.py
+Removed the rich presence at the start.
+
+## /cmds
+* chat.py - Added timestamp to print.
+* event.py - Added some little event.
+* help.py - Changed the embed + Added field of `report` command + Added timestamp to print.
+* music.py - Added timestamp to print.
+* user.py - Added `report`, `presence`, `ping` commands + Added timestamp to print.
+
 
 ## end
