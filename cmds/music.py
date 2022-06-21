@@ -4,10 +4,11 @@ from discord.utils import get
 from discord import ApplicationCommand, FFmpegPCMAudio
 from youtube_dl import YoutubeDL
 
-import json
+import json, time
 
 with open("config.json", mode="r", encoding="utf8") as jfile:
     config = json.load(jfile)
+
 
 class Music(Cog_Extension):
     @slash_command(name="join", description="讓機器人加入你所在的語音頻道")
@@ -21,8 +22,10 @@ class Music(Cog_Extension):
         await ctx.author.voice.channel.connect()
         await ctx.respond(f"已加入`{ctx.author.voice.channel}`")
         fromserver = ctx.author.guild.name
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print("/join")
         print("from", fromserver)
+        print("at", timestamp)
         print("by", ctx.author)
         print("------")
 
@@ -33,8 +36,10 @@ class Music(Cog_Extension):
             await voice.disconnect()
             await ctx.respond(f"已離開`{ctx.author.voice.channel}`")
             fromserver = ctx.author.guild.name
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             print("/leave")
             print("from", fromserver)
+            print("at", timestamp)
             print("by", ctx.author)
             print("------")
 
@@ -60,8 +65,10 @@ class Music(Cog_Extension):
             now_playing = f"現正播放：{url}"
             await ctx.respond(now_playing)
             fromserver = ctx.author.guild.name
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             print("/play", url)
             print("from", fromserver)
+            print("at", timestamp)
             print("by", ctx.author)
             print("------")
 
@@ -78,8 +85,10 @@ class Music(Cog_Extension):
             voice.resume()
             await ctx.respond("繼續播放音樂")
             fromserver = ctx.author.guild.name
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             print("/resume")
             print("from", fromserver)
+            print("at", timestamp)
             print("by", ctx.author)
             print("------")
         
@@ -94,8 +103,10 @@ class Music(Cog_Extension):
             voice.pause()
             await ctx.respond("暫停播放音樂")
             fromserver = ctx.author.guild.name
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             print("/pause")
             print("from", fromserver)
+            print("at", timestamp)
             print("by", ctx.author)
             print("------")
 
@@ -107,8 +118,10 @@ class Music(Cog_Extension):
             voice.stop()
             await ctx.respond(f"{ctx.author.mention} 音樂已停止")
             fromserver = ctx.author.guild.name
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             print("/stop")
             print("from", fromserver)
+            print("at", timestamp)
             print("by", ctx.author)
             print("------")
         
