@@ -22,10 +22,13 @@ leave
 
 ## game group
 ```
-guessnum
+guessnum (still in develop)
 ```
 
 ## user group
 ```
 avatar
+report
+presence
+ping
 ```
