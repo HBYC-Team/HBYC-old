@@ -1,5 +1,8 @@
 {
     "token": "put your token here and change some code, see at README.md",
 	"presence": "ww",
-	"got_mention": ["???", "幹嘛", "吵死了", "ping我幹嘛", "我是個大忙人，到底有什麼事", "沒事吵什麼鬼", "ping我沒辦法使用任何指令喔，請用`/help`", "到底?", "蝦毀?", "我現在很忙，稍等x^x^n秒後再來找我:)", "<:pingsock:985421847606726656>"]
+	"got_mention": ["???", "幹嘛", "吵死了", "ping我幹嘛", "我是個大忙人，到底有什麼事", "沒事吵什麼鬼", "ping我沒辦法使用任何指令喔，請用`/help`", "到底?", "蝦毀?", "我現在很忙，稍等x^x^n秒後再來找我:)", "<:pingsock:985421847606726656>", "又怎樣", "我現在沒空，等畢達哥拉斯再次降臨之際再來找我吧！", "我沒空，等你求出sinx=多少後再來找我", "I'm very busy, plz wait for i seconds.", "等你會C++再來找我"],
+	"lanbot": ["QAQ", "哈哈肯定不是在說我", "哈哈哈肯定在說隔壁棚的 <!@584677291318312963> 哈哈哈爛bot", "= =", "我好心免費幫你服務你說我爛？？", "QAQ", "...", "awa", "我不爛，說我爛不如說Python爛"],
+	"presence": ["你", "Roblox", "Sublime Text", "Vim", "GVim", "Minecraft", "Poppy Playtime", "Pycord", "/help", "試試看/help", "/report", "v0.0.3新發布！詳情請至Github上的HBYC repo查看！", "https://github.com/hugocoding/HBYC.git", "osu!", "dev C++", "Visual Studio Code", "新指令上線！試試看/presence"]
+
 }
