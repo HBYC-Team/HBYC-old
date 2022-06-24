@@ -56,9 +56,9 @@ class User(Cog_Extension):
     @slash_command(name="clean", description="清除一定數量的訊息")
     @commands.has_permissions(administrator=True)
     async def clean(self, ctx, num: int):
-            await ctx.channel.purge(limit=num+1)
-            await ctx.respond("The message has been cleaned^__^")
-            time.sleep(3)
+        await ctx.channel.purge(limit=num+1)
+        await ctx.respond("The message has been cleaned^__^")
+        time.sleep(3)
 
     
     @slash_command(name="presence", description="更換目前機器人的動態")
