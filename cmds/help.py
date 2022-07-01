@@ -61,6 +61,7 @@ class Help(Cog_Extension):
             embed.add_field(name="`report`", value="傳送錯誤或建議回報給作者 `替代用法:c!rp`", inline=False)
             embed.add_field(name="`ping`", value="看看機器人的跑速", inline=False)
             embed.add_field(name="`presence`", value="更改機器人目前的動態 `替代用法:c!ps`", inline=False)
+            embed.add_field(name="`announcement`", value="機器人的更新資訊 `替代用法:c!an`", inline=False)
             embed.set_footer(icon_url=ctx.author.avatar.url, text=f"{ctx.author} ‧ {timestamp}")
             await ctx.respond(embed=embed)
 
