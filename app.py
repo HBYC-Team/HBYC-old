@@ -30,7 +30,6 @@ async def on_ready():
     
     for guild in client.guilds:
         print(guild.id, guild.name)
-    await client.change_presence(activity=discord.Game(name="測試中，功能可能無法使用"))
     print("------------------------")
     
 
