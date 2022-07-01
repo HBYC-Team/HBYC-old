@@ -1,3 +1,5 @@
+import discord
+from discord.ext import commands, bridge
 from discord.commands import slash_command, Option
 from core.classes import Cog_Extension
 from discord.utils import get
@@ -11,7 +13,7 @@ with open("config.json", mode="r", encoding="utf8") as jfile:
 
 
 class Music(Cog_Extension):
-    @slash_command(name="join", description="讓機器人加入你所在的語音頻道")
+    @bridge.bridge_command(name="join", description="讓機器人加入你所在的語音頻道")
     async def join(self, ctx):
         if ctx.author.voice is None:
             return await ctx.respond("請先加入一個語音頻道")
@@ -29,7 +31,7 @@ class Music(Cog_Extension):
         print("by", ctx.author)
         print("------")
 
-    @slash_command(name="leave", description="讓機器人離開他所在的語音頻道")
+    @bridge.bridge_command(name="leave", description="讓機器人離開他所在的語音頻道")
     async def leave(self, ctx):
         voice = get(self.client.voice_clients, guild=ctx.guild)
         if voice.is_connected():
@@ -46,10 +48,11 @@ class Music(Cog_Extension):
         else:
             await ctx.respond(f"{ctx.author.mention} 我並不在任何語音頻道中")
 
-    @slash_command(name="play", description="讓機器人播放音樂，目前只能一次播放一首而且只能使用影片網址，音樂功能會在之後的版本再行改善")
+    @bridge.bridge_command(name="play", description="讓機器人播放音樂，目前只能一次播放一首而且只能使用影片網址，音樂功能會在之後的版本再行改善")
+    @discord.option(name="url", type=str)
     async def play(self, 
         ctx, 
-        url: Option(str, "請將連結貼在這裡")
+        url: "請將連結貼在這裡"
     ):
         YDL_OPTIONS = {'format': 'bestaudio', 'noplaylist': 'True'}
         FFMPEG_OPTIONS = {
@@ -77,7 +80,7 @@ class Music(Cog_Extension):
             return
         
 
-    @slash_command(name="resume", description="繼續播放原本在播放的音樂")
+    @bridge.bridge_command(name="resume", description="繼續播放原本在播放的音樂")
     async def resume(self, ctx):
         voice = get(self.client.voice_clients, guild=ctx.guild)
 
@@ -95,7 +98,7 @@ class Music(Cog_Extension):
         else:
             await ctx.respond(f"{ctx.author.mention} 我根本沒有在播音樂")
             
-    @slash_command(name="pause", description="暫停正在播放的音樂")
+    @bridge.bridge_command(name="pause", description="暫停正在播放的音樂")
     async def pause(self, ctx):
         voice = get(self.client.voice_clients, guild=ctx.guild)
 
@@ -110,7 +113,7 @@ class Music(Cog_Extension):
             print("by", ctx.author)
             print("------")
 
-    @slash_command(name="stop", description="結束目前正在播放的音樂")
+    @bridge.bridge_command(name="stop", description="結束目前正在播放的音樂")
     async def stop(self, ctx):
         voice = get(self.client.voice_clients, guild=ctx.guild)
 
