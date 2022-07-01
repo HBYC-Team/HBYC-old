@@ -93,7 +93,7 @@ class Event(Cog_Extension):
             print("------")
 
         if msg.content == "爛恐龍" and msg.author != self.client.user:
-            await msg.chnnel.send("你才爛你全家都爛") 
+            await msg.channel.send("你才爛你全家都爛") 
             print("Event:爛恐龍")
             fromserver = msg.author.guild.name
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
