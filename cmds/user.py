@@ -76,6 +76,22 @@ class User(Cog_Extension):
         print("-------")
         await self.client.change_presence(activity=discord.Game(name=game))
         await ctx.respond(f"{ctx.author.mention}，已經將動態更改為`{game}`，5分鐘後可以再次使用這個指令！")
-        
+
+    @bridge.bridge_command(name="announcement", description="機器人目前最新版本的內容", aliases=["an"])
+    async def announcement(self, ctx):
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        embed=discord.Embed(title="**HBYC的最新公告**", description=None, color=0x0080FF)
+        embed.set_author(name="HBYC#1512", icon_url="https://i.imgur.com/cuu63j3.jpg")
+        embed.add_field(name="**目前更新版本內容**", value="更新內容", inline=False)
+        embed.add_field(name="🔵v0.0.4", value="發布日期:???", inline=False)
+        embed.add_field(name="🔴移除內容", value="無", inline=False)
+        embed.add_field(name="🔴新增內容", value=">新增訊息指令，現在可以使用c![指令名稱]了!\n >新增部份隱藏反應", inline=True)
+        embed.set_footer(icon_url=ctx.author.avatar.url, text=f"{ctx.author} ‧ {timestamp}")
+        await ctx.respond(embed=embed)
+        print("/announcement")
+        print("from", ctx.author.guild.name)
+        print(f"at {timestamp}")
+        print("-------")
+
 def setup(client):
     client.add_cog(User(client))
