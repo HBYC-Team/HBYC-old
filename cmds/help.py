@@ -27,9 +27,9 @@ class Help(Cog_Extension):
             embed=discord.Embed(title="**HBYC的協助中心**", description="使用/help [類別] 或 c!help [類別]取得該類別指令的詳細使用方法", color=0x0080FF)
             embed.set_author(name="HBYC#1512", icon_url="https://i.imgur.com/cuu63j3.jpg")
             embed.add_field(name="**指令類別總覽**", value="HBYC的指令類別總覽", inline=False)
-            embed.add_field(name="🔵**聊天指令**", value="`/say`\n `/repeat`\n `/thinking`\n", inline=True)
-            embed.add_field(name="🔵**音樂指令**", value="`/join`\n `/play`\n `/pause`\n `/resume`\n `/stop`\n", inline=True)
-            embed.add_field(name="🔵**用戶指令**", value="`/avatar`\n `/report`\n" , inline=True)
+            embed.add_field(name="🔵**聊天指令**", value="`say`\n `repeat`\n `thinking`\n", inline=True)
+            embed.add_field(name="🔵**音樂指令**", value="`join`\n `play`\n `pause`\n `resume`\n `stop`\n", inline=True)
+            embed.add_field(name="🔵**用戶指令**", value="`avatar`\n `report`\n `ping`\n `presence`\n", inline=True)
             embed.set_footer(icon_url=ctx.author.avatar.url, text=f"{ctx.author} ‧ 使用/help [類別] 或 c!help [類別] 指令可取得更詳細的指令使用方式")
             await ctx.respond(embed=embed)
         
