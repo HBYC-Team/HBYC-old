@@ -83,7 +83,7 @@ class User(Cog_Extension):
         embed=discord.Embed(title="**HBYC的最新公告**", description=None, color=0x0080FF)
         embed.set_author(name="HBYC#1512", icon_url="https://i.imgur.com/cuu63j3.jpg")
         embed.add_field(name="**目前更新版本內容**", value="更新內容", inline=False)
-        embed.add_field(name="🔵v0.0.4", value="發布日期:???", inline=False)
+        embed.add_field(name="🔵v0.0.4", value="發布日期:2022.07.01", inline=False)
         embed.add_field(name="🔴移除內容", value="無", inline=False)
         embed.add_field(name="🔴新增內容", value=">新增訊息指令，現在可以使用c![指令名稱]了!\n >新增部份隱藏反應", inline=True)
         embed.set_footer(icon_url=ctx.author.avatar.url, text=f"{ctx.author} ‧ {timestamp}")
