@@ -2,6 +2,7 @@ import discord
 from random import choices
 from core.classes import Cog_Extension
 from discord.commands import slash_command, Option
+from discord.ext import commands, bridge
 import json, time
 
 with open("config.json", mode="r", encoding="utf8") as config:
@@ -9,12 +10,13 @@ with open("config.json", mode="r", encoding="utf8") as config:
 
 
 class Chat(Cog_Extension):
-    @slash_command(name="say", description="讓機器人替你說一句話")
+    @bridge.bridge_command(name="say", description="讓機器人替你說一句話")
+    @discord.option(name="訊息內容", type=str)
     async def say(
         self, 
         ctx, 
         *,
-        訊息內容: Option(str, "輸入你要機器人說的話")
+        訊息內容: "輸入你要機器人說的話"
     ):
         await ctx.respond("done", delete_after=0)
         await ctx.send(訊息內容)
@@ -26,12 +28,15 @@ class Chat(Cog_Extension):
         print("by:", ctx.author)
         print("------")
     
-    @slash_command(name="repeat", description="讓機器人重複一句你說的話")
+
+    @bridge.bridge_command(name="repeat", description="讓機器人重複一句你說的話")
+    @discord.option(name="訊息內容", type=str)
     async def repeat(
         self, 
         ctx, 
         *, 
-        訊息內容: Option(str, "輸入你要機器人重複的話")):
+        訊息內容: "輸入你要機器人重複的話"
+    ):
         await ctx.respond(訊息內容)
         fromserver = ctx.author.guild.name
         timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
@@ -39,10 +44,12 @@ class Chat(Cog_Extension):
         print("from", fromserver)
         print("at", timestamp)
         print("by:", ctx.author)
-        print("------"
-                )
-    @slash_command(name="thinking", description="thinking")
-    async def thinking(self, ctx, 種類: Option(str, "選擇thinking表情類型", choices=["normal", "cat", "attano","thonk","superthonk","raythonk","rainbowhtonk","owothonk","thongk","smile1","smile2","rayteethonk","blue", "10","distrotion", "pistol", "隨機(開發中)"])):
+        print("------")
+
+
+    @bridge.bridge_command(name="thinking", description="送出thinking表情符號")
+    @discord.option(name="種類", choices=conf["thinking"], type=str)
+    async def thinking(self, ctx, 種類: "選擇thinking表情類型"):
         fromserver = ctx.author.guild.name
         timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print("/thinking", 種類)
@@ -51,6 +58,10 @@ class Chat(Cog_Extension):
         print("by:", ctx.author)
         print("------")
         
+        if 種類 == None:
+            await ctx.respond("done", delete_after=0)
+            await ctx.send("<:thinking:974621588257398784>")
+
         if 種類 == "normal":
             await ctx.respond("done", delete_after=0)
             await ctx.send("<:thinking:974621588257398784>")
