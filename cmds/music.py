@@ -13,7 +13,7 @@ with open("config.json", mode="r", encoding="utf8") as jfile:
 
 
 class Music(Cog_Extension):
-    @bridge.bridge_command(name="join", description="讓機器人加入你所在的語音頻道")
+    @bridge.bridge_command(name="join", description="讓機器人加入你所在的語音頻道", aliases=["j"])
     async def join(self, ctx):
         if ctx.author.voice is None:
             return await ctx.respond("請先加入一個語音頻道")
@@ -31,7 +31,7 @@ class Music(Cog_Extension):
         print("by", ctx.author)
         print("------")
 
-    @bridge.bridge_command(name="leave", description="讓機器人離開他所在的語音頻道")
+    @bridge.bridge_command(name="leave", description="讓機器人離開他所在的語音頻道", aliases=["l"])
     async def leave(self, ctx):
         voice = get(self.client.voice_clients, guild=ctx.guild)
         if voice.is_connected():
