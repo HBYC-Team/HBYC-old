@@ -12,7 +12,7 @@ class Event(Cog_Extension):
     @commands.Cog.listener()
     async def on_message(self, msg):
         if msg.content.endswith("大佬"):
-            await msg.channel.send("肯定是在說AC0xRPFS001#5007")
+            await msg.channel.send("肯定是在說<@!475958550699442176>")
             print("Event:大佬")
             fromserver = msg.author.guild.name
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
@@ -85,6 +85,16 @@ class Event(Cog_Extension):
         if msg.content == "/he.p" and msg.author != self.client.user:
             await msg.channel.send("尋求協助前先確認一下自己的單字有沒有拼錯吧")
             print("Event:hekp")
+            fromserver = msg.author.guild.name
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            print("from", fromserver)
+            print("at", timestamp)
+            print("by", msg.author)
+            print("------")
+
+        if msg.content == "爛恐龍" and msg.author != self.client.user:
+            await msg.chnnel.send("你才爛你全家都爛") 
+            print("Event:爛恐龍")
             fromserver = msg.author.guild.name
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             print("from", fromserver)
