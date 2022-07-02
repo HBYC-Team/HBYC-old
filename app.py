@@ -129,5 +129,6 @@ load_dotenv()
 token = os.getenv("DISCORD_TOKEN")
 passwd = os.getenv("password")
 
+
 if __name__ == "__main__":
     client.run(token)    
