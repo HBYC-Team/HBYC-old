@@ -16,10 +16,10 @@
 ```bash
 $ python app.py
 ```
-Windows使用者可以直接運行`/bat/run.bat`使機器人上線，若要自動裝相依性套件可以直接使用`/bat/install.bat`
+Windows使用者可以直接運行`build.bat` 進行配置。
 </br>
 
-Linux, Mac使用者可以直接運行`/sh/run.sh`使機器人上線，若要自動安裝相依性套件可以直接使用`/sh/install.sh`
+Linux, Mac使用者可以直接運行`build.sh` 進行配置。（請記得將運行此script的權限開啟）
 </br>
 
 切記將`config.json`裡面的`token`欄位填上你自己的token,並將`app.py`的
@@ -51,7 +51,7 @@ if __name__ == "__main__":
 * 簡易聊天指令
 
 ## 指令列表
-請見[指令列表](./docs/cmds_list.md)檔案。
+請見[指令列表](./docs/command_list.md)檔案。
 
 ## 授權方式
 請見[LICENSE](./LICENSE)檔案。
@@ -60,7 +60,7 @@ if __name__ == "__main__":
 請見[requirements.txt](./requirements.txt)檔案。
 
 ## 更新日誌
-請見[更新日誌](./docs/dev_log.md)檔案(EN-Only)。
+請見[更新日誌](./docs/changeLog.md)檔案(EN-Only)。
 
 ## 作者
 恐龍#2549/hugocoding。
