@@ -1,8 +1,15 @@
+######################################
+#********HBYC Bot Chat Commands******#
+#*********Author:dragonyc1002********#
+#*******Release Date:2022.07.05******#
+#************Version:0.0.5***********#
+#********License: BSD 3-Clause*******#
+#****Develop OS: Ubuntu 20.04 LTS****#
+######################################
 import discord
-from random import choices
 from core.classes import Cog_Extension
-from discord.commands import slash_command, Option
 from discord.ext import commands, bridge
+from discord.ext.bridge.core import BridgeOption
 import json, time
 
 with open("config.json", mode="r", encoding="utf8") as config:
@@ -11,50 +18,31 @@ with open("config.json", mode="r", encoding="utf8") as config:
 
 class Chat(Cog_Extension):
     @bridge.bridge_command(name="say", description="讓機器人替你說一句話")
-    @discord.option(name="訊息內容", type=str)
-    async def say(
-        self, 
-        ctx, 
-        *,
-        訊息內容: "輸入你要機器人說的話"
-    ):
+    async def say(self, ctx, *,訊息內容: BridgeOption(str, "輸入你要機器人說的話")):
         await ctx.respond("done", delete_after=0)
         await ctx.send(訊息內容)
-        fromserver = ctx.author.guild.name
-        timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print("/say", 訊息內容)
-        print("from", fromserver)
-        print("at", timestamp)
+        print("from", ctx.author.guild.name)
+        print("at", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         print("by:", ctx.author)
         print("------")
     
 
     @bridge.bridge_command(name="repeat", description="讓機器人重複一句你說的話")
-    @discord.option(name="訊息內容", type=str)
-    async def repeat(
-        self, 
-        ctx, 
-        *, 
-        訊息內容: "輸入你要機器人重複的話"
-    ):
+    async def repeat(self, ctx, *, 訊息內容: BridgeOption(str, "輸入你要機器人重複的話")):
         await ctx.respond(訊息內容)
-        fromserver = ctx.author.guild.name
-        timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print("/repeat", 訊息內容)
-        print("from", fromserver)
-        print("at", timestamp)
+        print("from", ctx.author.guild.name)
+        print("at", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         print("by:", ctx.author)
         print("------")
 
 
     @bridge.bridge_command(name="thinking", description="送出thinking表情符號")
-    @discord.option(name="種類", choices=conf["thinking"], type=str)
-    async def thinking(self, ctx, 種類: "選擇thinking表情類型"):
-        fromserver = ctx.author.guild.name
-        timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    async def thinking(self, ctx, 種類: BridgeOption(str, "選擇thinking表情類型", choices=conf["thinking"], required=False) = None):
         print("/thinking", 種類)
-        print("from", fromserver)
-        print("at", timestamp)
+        print("from", ctx.author.guild.name)
+        print("at", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         print("by:", ctx.author)
         print("------")
         
@@ -118,14 +106,14 @@ class Chat(Cog_Extension):
             await ctx.respond("done", delete_after=0)
             await ctx.send("<:10thonk:984310410738028604>")
 
-        if 種類 == "distrotion":
+        if 種類 == "distortion":
             await ctx.respond("done", delete_after=0)
             await ctx.send("<:distrotionthonk:984310414097657877>")
 
         if 種類 == "pistol":
             await ctx.respond("done", delete_after=0)
             await ctx.send("<:pisthonk:984310418455539742>")
-        
+
 
 def setup(client):
     client.add_cog(Chat(client))
