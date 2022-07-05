@@ -79,4 +79,10 @@ Added the message command.
 * music.py - Added the message command. + Bug fixes.
 * user.py - Added the message command. + Bug fixes. + Added announcement command.
 
+# v0.0.5
+Release Date:2022.07.05
+
+- Most of the bugs has been fixed.
+- Added some event at `event.py`.
+
 ## end

@@ -3,6 +3,8 @@
 
 使用help指令也可看到指令列表/You can see the commands list by`/help`command.
 
+適用版本：v0.0.5
+
 ## chat group
 ```
 say
