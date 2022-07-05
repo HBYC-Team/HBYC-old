@@ -1,12 +1,11 @@
-"""
-***************HBYC Bot*************
-*********Author:dragonyc1002********
-*******Release Date:2022.07.02******
-************Version:0.0.4***********
-********License: BSD-3 Claude*******
-****Develop OS: Ubuntu 20.04 LTS****
-************************************
-"""
+######################################
+#***************HBYC Bot*************#
+#*********Author:dragonyc1002********#
+#*******Release Date:2022.07.05******#
+#************Version:0.0.5***********#
+#********License: BSD 3-Clause*******#
+#****Develop OS: Ubuntu 20.04 LTS****#
+######################################
 import discord
 from discord.ext import commands, bridge
 from discord.commands import slash_command, Option
