@@ -1,3 +1,12 @@
+#########################################
+#**********HBYC Bot Build File**********#
+#**Type: Shell Script~for Linux, MacOS**#
+#**********Author: dragonyc1002*********#
+#********Release Date:2022.07.05********#
+#*************Version: 0.0.5************#
+#*********Lisence: BSD 3-Clause*********#
+#########################################
+
 #!/bin/sh
 echo "Choose Language: EN or ZH-TW."
 read lang
