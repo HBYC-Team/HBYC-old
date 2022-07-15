@@ -3,7 +3,7 @@
 ![last_commit](https://img.shields.io/github/last-commit/hugocoding/HBYC)
 ![Discord](https://img.shields.io/discord/977204156043509780)
 [![EMU900!!!](./public/images/banner.jpeg)](https://reurl.cc/GxQqdy)
-
+**本專案已經中止開發，將轉往新專案繼續開發本機器人**
 一個非常簡易的discord機器人，使用pycord模組編寫。
 
 ## 如何做一台跟這台一樣的機器人
